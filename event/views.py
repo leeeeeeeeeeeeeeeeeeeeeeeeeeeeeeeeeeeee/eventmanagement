@@ -22,8 +22,6 @@ from eventmanagement import settings
 
 
 def strt(request):
-    a=request.session['logid']
-    print(a)
     if request.session['logid']=="":
         return redirect("/event/clienthome/")
     elif request.user.is_staff:
