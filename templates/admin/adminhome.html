@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#evnt').click(function () {
+            $('.event').removeClass('event');
+            $('.user').hide()
+
+            
+        })
+        $('#usr').click(function () {
+            if($('.user').css('display')== 'block'){
+               $('.event').addClass('event');
+                $('.user').show()
+                return false
+            }
+
+
+
+        })
+        
+    })
+</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+         body,html{
+        scroll-behavior: smooth;
+        font-family: "Anton";
+
+
+    }
+        #links{
+
+            font-size: 22px;
+
+{#            backdrop-filter: blur(10px);#}
+            background: linear-gradient(to bottom, #747264 0%,transparent 70%);
+            width: 100%;
+
+
+
+        }
+        .nav-link{
+            color: #747264;
+            tansition:transform 0.3s ease-in-out;
+        }
+        .nav-link:hover{
+           transform: scale(1.1);
+            color: #747264;
+        }
+        .card{
+            width: 800px;
+            padding: 50px;
+            margin: 30px;
+            background: #747264;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+            position: relative;
+
+
+        }
+        .container-fluid{
+            align-content:center;
+            justify-items: center;
+
+
+            
+
+        }
+        .row1{
+            font-weight:600 ;
+        }
+        .col-3{
+            justify-content: center;
+            align-items: center;
+        }
+        .highlights{
+            border: 2px solid red;
+        }
+        .active{
+            font-size: 30px;
+        }
+        .event{
+            display: none;
+
+        }
+
+    </style>
+<body>
+
+
+<nav class="navbar navbar-expand navbar-dark justify-content-center" id="links">
+    <ul class="navbar nav">
+        <li class="nav-item">
+            <a href="/event/adminhm/" class="nav-link active" id="usr">users</a>
+        </li>
+        <li class="nav-item">
+            <a  class="nav-link " id="evnt">event teams</a>
+        </li>
+
+    {% if e %}
+        <li class="nav-item">
+            <a href="/event/adminshowbooking/" class="nav-link ">bookings</a>
+        </li>
+        {% else %}
+{% endif %}
+
+        <li class="nav-item">
+            <a  class="nav-link " href="/event/request/">requests</a>
+        </li>
+
+    {% if c %}
+        <li class="nav-item">
+            <a class="nav-link " href="/event/admincomplaint/" >compaints</a>
+        </li>
+        {% else %}
+{% endif %}
+
+        {% if d %}
+        <li class="nav-item">
+            <a href="/event/adminfeedback/" class="nav-link ">feedbacks</a>
+        </li>
+        {% else %}
+        {% endif %}
+    <li class="nav-item">
+            <a  class="nav-link " href="/event/logout/">logout</a>
+        </li>
+    </ul>
+
+
+</nav>
+<div class="container-fluid content">
+
+
+    <table  class="table user">
+
+        <tr class="row row1">
+            <th class="col-lg-3">name</th><th class="col-lg-3">email</th><th class="col-lg-3">number</th><th class="col-sm-3">place</th>
+        </tr>
+        {% for i in a %}
+             <tr class="row">
+                 <td class="col-3">{{ i.name }}</td><td class="col-3">{{ i.email }}</td><td class="col-3">{{ i.number }}</td><td class="col-3">{{ i.place }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+     <table  class="table event" >
+
+        <tr class="row row1 ">
+            <th class="col-3">event teams</th><th class="col-3">email</th><th class="col-3">number</th><th class="col-3">links</th>
+        </tr>
+        {% for i in b %}
+             <tr class="row">
+            <td class="col-3">{{ i.name }}</td><td class="col-3">{{ i.email }}</td><td class="col-3">{{ i.number }}</td><td class="col-3"><a href="/event/openevent/{{ i.id }}">go to events</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+<div><a href="/event/cpass/">change password</a></div>
+
+
+</div>
+</body>
+</html>

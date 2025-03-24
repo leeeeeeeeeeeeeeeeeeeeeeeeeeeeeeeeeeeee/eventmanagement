@@ -1,0 +1,69 @@
+  {% if messages %}
+  {% for message in messages %}
+  {% if message.tags == "error" %}
+  <div class="mx-auto mt-10 come-up absolute w-full justify-center  flex">
+  <div class="flex items-center p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50" role="alert" >
+    <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-medium">Warning alert!</span> {{ message }}.
+    </div>
+  </div>
+  </div>
+  {% else %}
+ 
+  <div class=" mx-auto mt-10 fade-out absolute w-full justify-center  flex">
+    
+    <div class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 relative " role="alert" >
+      <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+      </svg>
+      <span class="sr-only">Info</span>
+      <div>
+        <span class="font-medium">Success alert!</span> {{ message }}.
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+<style>
+  
+  .come-up {
+  animation: come-up 0.5s ease-in-out forwards;
+}
+
+@keyframes come-up{
+    from{
+      top: -500px;
+    }
+    to{
+      top: -20px;
+    }
+}
+
+
+.fade-out {
+  animation: fade-out 2s ease-in-out forwards;
+}
+@keyframes fade-out {
+  0% {
+    top: -500px;
+  }
+  10% {
+    top: -20px;
+  }
+  80%{
+    top: -20px;
+  }
+  100% {
+    top: -500px;
+  }
+}
+</style>
+

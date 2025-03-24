@@ -1,0 +1,57 @@
+{% extends 'global-event.html' %}
+
+{% block title %}eventhome{% endblock %}
+
+{% block content %}
+
+{% load static %}
+{%  if a %}
+<div "
+class="container-fluid mt-3 py-5  bg-gray-200 px-10 w-full grid grid-col-1 lg:grid-cols-3 text-black gap-r-6 justify-center flex-col min-h-full"
+>
+    {% for apntmnt in a %}
+    <a
+    href="/event/enqmore/{{ a.id }}"
+    class="rounded-lg my-2 bg-white  mx-2   px-4 py-4 ">
+        <div class="grid grid-row">
+            <div class="mb-3 w-3">
+                <img
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+                alt="Testimonial avatar 1"
+                class="size-14 min-h-14 min-w-14 rounded-full object-cover"
+              />
+            </div>
+
+            <div class="text-black text-lg mx-1">
+                <h5>{{ apntmnt.USER.username }}</h5>
+               <span class="text-sm text-gray-600">
+                 {{ apntmnt.ALOG.title }}  
+               </span>
+                <br>
+                <span class=" text-gray-400 text-xs">
+                        {{ apntmnt.date }} 
+                
+                    {{ apntmnt.location }} 
+                
+                    <br> 
+                </span>  
+           </div>
+        </div>
+        
+        
+        
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+
+<div class="container-fluid bg-gray-200 w-full flex items-center justify-center h-[100vh]">
+    <h6> you don't have any enquiries yet!</h6>
+</div>
+
+{% endif %}
+
+{% include 'components/footer.html' %}
+
+
+{% endblock %}

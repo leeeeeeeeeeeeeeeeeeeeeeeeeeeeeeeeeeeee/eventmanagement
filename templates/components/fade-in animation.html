@@ -1,0 +1,23 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".fade-in-on-view");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("opacity-100", "animate-fade-in");
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+            }
+        );
+
+        elements.forEach((element) => {
+            observer.observe(element);
+        });
+    });
+</script>

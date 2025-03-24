@@ -1,0 +1,18 @@
+        :root {
+            --primary-color: #f1f1f1;
+            --secondary-color:#20051e;
+            --background-color: #FFF0F5;
+            --text-color: #4A4A4A;
+            --white:#ffffff;
+            --transition-speed: 0.3s;
+
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+          }
+
+        a:hover{
+            color: currentColor; 
+        }

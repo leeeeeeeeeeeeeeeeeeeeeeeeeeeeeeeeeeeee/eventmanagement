@@ -1,0 +1,347 @@
+
+{% extends 'global-client-page.html' %}
+
+{% block title %}clienthome{% endblock %}
+
+{% block content %}
+
+{% load static %}
+     
+<!-- {% include 'components/fade-in animation.html' %} -->
+
+
+<section id="" class="relative px-[5%] " >  
+  <div class="container relative z-10 " >
+    <div
+      class="flex max-h-[60rem] min-h-svh lg:items-center py-16 md:py-24 lg:py-28 items-end pb-20 "
+    >
+      <div class="max-w-md">
+        <h1
+          class="mb-5 text-6xl font-bold text-white lg:text-text-alternative md:mb-6 md:text-9xl lg:text-10xl"
+        >
+          Celebrate Your Special Day with Us!
+        </h1>
+        <p class="lg:text-text-alternative text-white md:text-md">
+          Discover a variety of customizable birthday packages tailored to your
+          needs. Let us help you create unforgettable memories for you and your
+          loved ones.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
+          <button
+            class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-6 py-3"
+            title="Explore"
+            onclick="window.location.href='/event/packages'"
+          >
+            Explore</button
+          >{% include 'components/signup-button.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute inset-0 z-0">
+    <img
+      src="https://images.pexels.com/photos/7561336/pexels-photo-7561336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      class="size-full object-cover grayscale-25"
+      alt=" placeholder image"
+    />
+    <div class="absolute inset-0 bg-['/static/headerimage.jpg']"></div>
+  </div>
+</section>
+
+<section  class="px-[5%] py-16 md:py-24 lg:py-28 fade-in-on-view  animate-delay-500">
+  <div class="container">
+    <div
+      class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20"
+    >
+      <div>
+        <p class="mb-3 font-semibold md:mb-4">Celebrate</p>
+        <h1
+          class="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl"
+        >
+          Your Perfect Birthday Event Awaits You
+        </h1>
+        <p class="md:text-md">
+          Transform your birthday dreams into reality with our comprehensive
+          event management services. Customize every detail and connect directly
+          with our expert event managers for a seamless experience.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+          <button
+            class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3"
+            title="Explore"
+            onclick="window.location.href='/event/packages'"
+          >
+            Explore</button>
+          <button
+            class="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0"
+            title="Chat"
+          >
+            Chat<svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 15 15"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://images.pexels.com/photos/7180862/pexels-photo-7180862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"           
+          class="w-full object-cover h-130"
+          alt=" placeholder image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section  class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="flex flex-col items-center">
+      <div class="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
+        <div class="w-full max-w-lg">
+          <p class="mb-3 font-semibold md:mb-4">Celebrate</p>
+          <h2 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            Your Perfect Birthday Event Awaits You
+          </h2>
+          <p class="md:text-md">
+            Experience seamless event management tailored to your needs. Our
+            platform allows you to negotiate payments and customize your
+            celebration effortlessly.
+          </p>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12"
+      >
+       <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-6 mb-6 md:mb-8">
+            <img
+              src="https://images.pexels.com/photos/3943728/pexels-photo-3943728.jpeg"
+              class="w-200 max-h-50  object-cover"
+              alt=" placeholder image"
+            />
+          </div>
+          <h3
+            class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl"
+          >
+            Personalized Event Management Just for You
+          </h3>
+          <p>Get a tailored experience that matches your vision.</p>
+        </div>
+        <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-6 mb-6 md:mb-8">
+            <img
+              src="https://images.pexels.com/photos/14105/pexels-photo-14105.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              class="w-200 max-h-50  object-cover"
+              alt=" placeholder image"
+            />
+          </div>
+          <h3
+            class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl"
+          >
+            Personalized Event Management Just for You
+          </h3>
+          <p>Get a tailored experience that matches your vision.</p>
+        </div>
+        <div class="flex w-full flex-col items-center text-center">
+          <div class="rb-6 mb-6 md:mb-8">
+            <img
+              src="https://images.pexels.com/photos/5745045/pexels-photo-5745045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              class="w-200 max-h-50  object-cover"
+              alt=" placeholder image"
+            />
+          </div>
+          <h3
+            class="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl"
+          >
+            Effortless Booking Process for Your Convenience
+          </h3>
+          <p>Book your event with just a few clicks.</p>
+        </div>
+      </div>
+      <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+        <button
+          class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3"
+        >
+          Learn More</button
+        >{% include 'components/signup-button.html' %}
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section  class="relative px-[5%] py-16 md:py-24 lg:py-28">
+  <div
+    class="container grid grid-rows-1 items-start gap-y-5 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20 lg:gap-y-16"
+  >
+    <div>
+      <h1 class="text-5xl font-bold md:text-7xl lg:text-8xl">
+        Join Us for Unforgettable Celebrations
+      </h1>
+    </div>
+    <div>
+      <p class="md:text-md">
+        Sign up or log in to discover our exciting event packages tailored just
+        for you. Explore all the services we offer to make your birthday
+        celebration truly special.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
+        {% include 'components/signup-button.html' %}
+        <button
+          class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary bg-background-primary px-6 py-3"
+          title="Log In"
+        >
+          Log In
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section  class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="mb-12 w-full md:mb-18 lg:mb-20">
+      <h1 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+        Customer Testimonials
+      </h1>
+      <p class="md:text-md">
+        Our clients love the unforgettable experiences we create!
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-8 lg:gap-16">
+      <div
+        class="flex h-full max-w-lg flex-col items-start justify-start text-left"
+      >
+        <div class="mb-6 flex md:mb-8">
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+        </div>
+        <blockquote class="text-md font-bold leading-[1.4] md:text-xl">
+          &quot;The event was perfectly organized, exceeding all our
+          expectations!&quot;
+        </blockquote>
+        <div
+          class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:w-auto md:flex-row md:items-center md:gap-5"
+        >
+          <div>
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              alt="Testimonial avatar 1"
+              class="size-14 min-h-14 min-w-14 rounded-full object-cover"
+            />
+          </div>
+          <div class="mb-4 md:mb-0">
+            <p class="font-semibold">Emily Johnson</p>
+            <p>Event Planner, ABC Corp</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex h-full max-w-lg flex-col items-start justify-start text-left"
+      >
+        <div class="mb-6 flex md:mb-8">
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          {% include 'components/stars.html' %}
+          
+        </div>
+        <blockquote class="text-md font-bold leading-[1.4] md:text-xl">
+          &quot;Fantastic service! The team made our birthday celebration
+          unforgettable!&quot;
+        </blockquote>
+        <div
+          class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:w-auto md:flex-row md:items-center md:gap-5"
+        >
+          <div>
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              alt="Testimonial avatar 1"
+              class="size-14 min-h-14 min-w-14 rounded-full object-cover"
+            />
+          </div>
+          <div class="mb-4 md:mb-0">
+            <p class="font-semibold">Michael Smith</p>
+            <p>Marketing Director, XYZ Ltd</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section  class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="mb-12 text-center md:mb-18 lg:mb-20">
+      <h2 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+        Event Gallery
+      </h2>
+      <p class="md:text-md">
+        Explore our stunning past events and celebrations.
+      </p>
+    </div>
+    <div class="grid auto-cols-fr grid-cols-1 gap-8">
+      <a href="#" class="size-full"
+        ><div class="w-full overflow-hidden">
+          <img
+            src="https://images.pexels.com/photos/3419692/pexels-photo-3419692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt=" placeholder image 1"
+            class="aspect-video size-full object-cover"
+          /></div
+      ></a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+
+
+        // Fade-in animation
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Search AJAX
+       
+    </script>
+{% endblock %}

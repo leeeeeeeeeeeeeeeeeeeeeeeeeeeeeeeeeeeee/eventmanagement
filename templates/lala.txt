@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function () {
+        $("#showrequests").click(function () {
+            $('.content').fadeOut(300);
+            $('.requests').css("display","block")
+            $('.nav-link').fadeOut(300);
+            $('.navbar-brand').fadeOut(300);
+            $('.btn1').removeClass('btn1')
+
+
+        })
+         $(".btn1").click(function () {
+            $('.content').fadeIn(300);
+            $('.requests').css("display","none")
+            $('.nav-link').fadeIn(300);
+            $('.navbar-brand').fadeIn(300);
+            $(this).addClass('btn1')
+            $(this).hide(300);
+
+        })
+        $('#showprfl').click(function () {
+            $('.profile').fadeIn(300);
+
+        })
+        $('.content').click(function () {
+            $('.profile').fadeOut(300);
+
+        })
+
+
+    })
+</script>
+
+<style>
+body,html{
+        scroll-behavior: smooth;
+        font-family: "Anton";
+        background:#747264;
+        no-repeat;
+        height: 100%;
+
+
+    }
+
+
+    .content{
+        background: transparent;
+
+    }
+    #col4-2{
+        padding-inline: 50px;
+        padding-block:20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #col8-2{
+        margin-block:7% 5%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .navbar{
+        display: flex;
+        width: 100%;
+         background: #f5efeb;
+        padding-inline: 100px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+
+        position: relative;
+
+    }
+    
+   .navbar-nav{
+       display: flex;
+       width:100%;
+       justify-content: flex-center;
+
+   }
+    .parent{
+        display: flex;
+        position: relative;
+           width: 100%;
+
+    background: #f5efeb;
+    min-height: 500px;
+justify-content: flex-end;
+        align-items: flex-end;
+        height: 650px;
+
+    }
+    .child1{
+        display: flex;
+        border-radius: 20px;
+        width: 450px;
+        overflow: hidden;
+        box-shadow: 0 5px 25px rgba(2,2,2,0.25);
+        bottom: 70px;
+        right: 100px;
+        position: relative;
+        height: 550px;
+        overflow: hidden;
+        border-radius: 0;
+        background-position: center;
+        object-fit: cover;
+    }
+    .child2{
+        align-self: flex-end;
+        position: absolute;
+        bottom:130px;
+        left: 80px;
+        width: 60%;
+         font-size: 80px;
+        text-align: left;
+        color: #353a5f;
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+        z-index: 2;
+
+{#        margin-top:40px;#}
+    }
+    .nav-link{
+        color: red;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        transition: all 0.2s ease-in-out;
+        position: relative;
+
+
+    }
+    .nav-link:hover{
+        color: red;
+        transform: scale(1.4);
+    }
+    .navbar-brand{
+         text-shadow: 0px 0.7px 2px rgba(0,0,0,0.5);
+        font-size: 35px;
+        font-family: Cormorant Garamond;
+        margin-bottom: 7px;
+        justify-self: start;
+
+    }
+    .card-drop{
+        display: none;
+        position: absolute;
+        background: #f5efeb;
+        border-radius: 10px;
+        padding: 10px;
+box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+        z-index: 5;
+    }
+    .requests{
+        display: none;
+    }
+    .container-fluid{
+
+        display: flex;
+        width: 100%;
+         background: #f8f8f8;
+
+        overflow-x: auto;
+        grid-gap:30px ;
+{#        height: 500px;#}
+        padding: 40px;
+
+    }
+
+.card{
+
+        background: #f8f8f8;
+        min-width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+{#        padding-block: 0px ;#}
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+
+
+    }
+    .doc{
+        background: transparent;
+        text-align: center;
+        justify-content: center;
+        color: #f8f8f8;
+        padding: 10%;
+    }
+    a{
+        text-decoration: none;
+        color: #353a5f;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    a:hover{
+        color: #353a5f;
+    }
+
+    .btn1{
+        display: none;
+        position: absolute;
+        z-index: 0;
+    }
+    btn1:active{
+        display: none;
+    }
+    .logout{
+        right: 0;
+    }
+
+</style>
+</head>
+<body><center>
+<nav class="navbar  navbar-expand navbar">
+    <button class="btn1 btn btn-primary" >back</button>
+<a class="navbar-brand">bdsherieees</a>
+    <ul class="navbar-nav ">
+
+
+        <li class="nav-item">
+
+            <a class="nav-link" id="showprfl">
+                profile
+            </a>
+            <div class="dropdown-content" >
+                <div>
+
+                </div>
+               <div class="card-drop profile">
+
+                {{ d.name }}<br>
+                {{ d.email}}|
+                {{ d.number }}
+               </div>
+            </div>
+        </li>
+
+            <li class="nav-item">
+
+            <a class="nav-link" id="showrequests" >
+                requests
+            </a>
+
+
+        </li>
+        <li class="nav-item logout">
+
+            <a class="nav-link" href="/event/logout" >
+                logout
+            </a>
+
+
+        </li>
+
+    </ul>
+</nav>
+<div class="content">
+
+
+<div class=" parent" id="card1">
+
+
+
+            <h1 class="child2" id="h1-disc">
+        We found a solution for your Business.
+    </h1>
+
+
+                <img src="/static/cake.jpg" class="card-img1 child1"  >
+
+
+</div>
+<div class="doc">
+    <h4>To our managing team</h4>
+As we prepare to bring dreams to life and create unforgettable moments, remember this: every challenge we face is an opportunity to shine brighter. Your creativity, dedication, and teamwork are the heartbeat of every successful event. Together, there’s nothing we can’t achieve. Let’s make magic happen and turn every vision into reality. Keep believing, keep striving, and let’s make this journey remarkable!</div>
+
+
+<div class="container-fluid">
+
+
+    {% for i in a %}
+    <div class="card" id="crd1">
+    <div class="row">
+        <div class="col-4" id="col4-2"> <img src="{{ i.photo }}"  class="card-img" width="100px" height="200px" ></div>
+        <div class="col-8" id="col8-2">
+             <h5>{{ i.title }}</h5>
+        {{ i.discription }}
+        <div><a href="/event/e_editpage/{{ i.id }}" class="btn btn-outline-secondary btn-sm">edit</a>
+        <a href="/event/edelete/{{ i.id }}" class="btn btn-outline-danger btn-sm">delete</a></div>
+        </div>
+    </div>
+
+
+
+</div>
+    {% endfor %}
+<a class="card card-link"href="/event/addpkg/">
+    <div>Add Events</div>
+</a>
+
+</div>
+<div class="dic">
+
+
+</div>
+
+
+</div>
+<div class="requests" >
+            {% if g %}
+    <h4>bookings</h4>
+     {% for i in g %}
+    <div class="card" >
+        <div class="row">
+            <div class="col-9">
+                client:{{ i.USER.name }},{{ i.USER.email }}<br>
+                event :{{ i.ALOG.title }}<br>
+                 date & time:{{ i.date }},{{ i.time }}<br>
+                crowd:{{ i.crowd }},{{ i.time }}<br>
+            </div>
+            <div class="col-3"  style="display: flex; justify-content: center;align-items: center">
+               <div class="btn-group">
+                   <span >
+                       <a href="" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" >accept</a>
+                       <ul class="dropdown-menu">
+                           <form method="post" action="/event/accept_appointment/">
+                            {% csrf_token %}
+                           <li><input type="text" placeholder="estimated amount" name="amount" id="amount" required></li>
+                           <input type="hidden" name="id" value="{{ i.id }}" >
+                           <li><button  class="btn btn-outline-primary btn-sm" onclick="return a()">confirm</button></li>
+                               <script>
+                                   function a() {
+                                        var amount=document.getElementById("amount").value
+                                   if (amount==""){
+
+                                             alert("yOU should fill an amount to submit")
+                                             return false
+                                   }
+                                   }
+
+
+                               </script>
+
+                       </form>
+
+                       </ul>
+                   </span>
+                    <a href="/event/reject_appointment/{{i.id  }}" class="btn btn-primary btn-sm">reject</a>
+               </div>
+
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+
+                <h6>there is no bookings</h6>
+{% endif %}
+</div>
+
+
+
+
+</center>
+
+</body>
+</html>

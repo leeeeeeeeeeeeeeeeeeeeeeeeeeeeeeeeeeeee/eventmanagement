@@ -1,0 +1,378 @@
+{% extends 'auth-global.html' %}
+
+{% block title %}login{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+{% include 'components/messages.html' %}
+
+<section id="relume">
+  <div
+    class="relative grid min-h-screen grid-cols-1 justify-center overflow-auto lg:grid-cols-2"
+  >
+    <div
+      class="absolute left-0 right-0 top-0 z-10 flex h-16 items-center justify-center px-[5%] md:h-18 lg:justify-start"
+    >
+      <a href="#"
+        ><img
+          src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+          alt="Logo text"
+      /></a>
+    </div>
+    <div
+      class="relative mx-[5vw] flex items-center justify-center pb-16 pt-20 md:pb-20 md:pt-24 lg:py-20"
+    >
+      <div class="mx-auto w-full max-w-sm">
+        <div class="mx-auto mb-8 w-full max-w-lg text-center md:mb-10 lg:mb-12">
+          <h1 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            Sign Up
+          </h1>
+          <p class="md:text-md">Lorem ipsum dolor sit amet adipiscing elit.</p>
+        </div>
+
+        <form class="grid grid-cols-1 gap-4" method="post" action="">
+          {% csrf_token %}
+          <div class="relative flex w-full items-center">
+            <input
+              type="username"
+              class="flex size-full min-h-11 border border-border-primary bg-background-primary py-2 align-middle file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 px-3"
+              id="username"
+              placeholder="username"
+              name="username"
+              value=""
+            />
+          </div>
+          <div class="relative flex w-full items-center">
+            <input
+              type="emial"
+              class="flex size-full min-h-11 border border-border-primary bg-background-primary py-2 align-middle file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 px-3"
+              id="email"
+              name="email"
+              placeholder="email"
+              value=""
+            />
+          </div>
+          <div class="relative flex w-full items-center">
+            <input
+              type="password"
+              class="flex size-full min-h-11 border border-border-primary bg-background-primary py-2 align-middle file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 px-3"
+              id="password"
+              name="password"
+              placeholder="Password"
+              value=""
+            />
+          </div>
+          <button
+            class="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-6 py-3"
+            title="Sign up"
+          >
+            Sign up
+          </button>
+          <div class="my-3 h-px w-full bg-border-primary md:my-4"></div>
+         
+        </form>
+        <div
+          class="mt-5 inline-flex w-full items-center justify-center gap-x-1 text-center md:mt-6"
+        >
+          <p>Already have an account? <a href="/signin_manager">
+            
+         Log In </a></p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center justify-center bg-background-secondary px-[5vw] pb-20 pt-16 md:py-20"
+    >
+      <div
+        class="relative overflow-hidden"
+        role="region"
+        aria-roledescription="carousel"
+      >
+        <div class="relative">
+          <div>
+            <div class="flex -ml-4 pb-7">
+              <div
+                role="group"
+                aria-roledescription="slide"
+                class="min-w-0 shrink-0 grow-0 basis-full pl-4 max-w-full"
+              >
+                <div
+                  class="mx-auto flex h-full max-w-lg flex-col items-center justify-center text-center"
+                >
+                  <div class="flex">
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                  </div>
+                  <blockquote
+                    class="my-6 text-xl font-bold md:my-8 md:text-2xl"
+                  >
+                    &quot;Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse varius enim in eros elementum tristique.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum
+                    nulla.&quot;
+                  </blockquote>
+                  <div
+                    class="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:text-left"
+                  >
+                    <div class="rb-4 mb-4 md:mb-0 md:mr-5">
+                      <img
+                        src="https://d22po4pjz3o32e.cloudfront.net/avatar-image.svg"
+                        alt="Testimonial avatar 1"
+                        class="size-14 min-h-14 min-w-14 rounded-full object-cover"
+                      />
+                    </div>
+                    <div class="rb-4 mb-4 md:mb-0">
+                      <p class="font-semibold">Name Surname</p>
+                      <p>Position, Company name</p>
+                    </div>
+                    <div
+                      class="mx-5 hidden w-px self-stretch bg-black md:block"
+                    ></div>
+                    <div>
+                      <img
+                        src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
+                        alt="Webflow logo 1"
+                        class="max-h-12"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                role="group"
+                aria-roledescription="slide"
+                class="min-w-0 shrink-0 grow-0 basis-full pl-4 max-w-full"
+              >
+                <div
+                  class="mx-auto flex h-full max-w-lg flex-col items-center justify-center text-center"
+                >
+                  <div class="flex">
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                    {% include 'components/stars.html' %}
+                  </div>
+                  <blockquote
+                    class="my-6 text-xl font-bold md:my-8 md:text-2xl"
+                  >
+                    &quot;Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse varius enim in eros elementum tristique.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum
+                    nulla.&quot;
+                  </blockquote>
+                  <div
+                    class="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:text-left"
+                  >
+                    <div class="rb-4 mb-4 md:mb-0 md:mr-5">
+                      <img
+                        src="https://d22po4pjz3o32e.cloudfront.net/avatar-image.svg"
+                        alt="Testimonial avatar 2"
+                        class="size-14 min-h-14 min-w-14 rounded-full object-cover"
+                      />
+                    </div>
+                    <div class="rb-4 mb-4 md:mb-0">
+                      <p class="font-semibold">Name Surname</p>
+                      <p>Position, Company name</p>
+                    </div>
+                    <div
+                      class="mx-5 hidden w-px self-stretch bg-black md:block"
+                    ></div>
+                    <div>
+                      <img
+                        src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
+                        alt="Webflow logo 2"
+                        class="max-h-12"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                role="group"
+                aria-roledescription="slide"
+                class="min-w-0 shrink-0 grow-0 basis-full pl-4 max-w-full"
+              >
+                <div
+                  class="mx-auto flex h-full max-w-lg flex-col items-center justify-center text-center"
+                >
+                  <div class="flex">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="size-6"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                      ></path></svg
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="size-6"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                      ></path></svg
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="size-6"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                      ></path></svg
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="size-6"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                      ></path></svg
+                    ><svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="size-6"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <blockquote
+                    class="my-6 text-xl font-bold md:my-8 md:text-2xl"
+                  >
+                    &quot;Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Suspendisse varius enim in eros elementum tristique.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum
+                    nulla.&quot;
+                  </blockquote>
+                  <div
+                    class="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:text-left"
+                  >
+                    <div class="rb-4 mb-4 md:mb-0 md:mr-5">
+                      <img
+                        src="https://d22po4pjz3o32e.cloudfront.net/avatar-image.svg"
+                        alt="Testimonial avatar 3"
+                        class="size-14 min-h-14 min-w-14 rounded-full object-cover"
+                      />
+                    </div>
+                    <div class="rb-4 mb-4 md:mb-0">
+                      <p class="font-semibold">Name Surname</p>
+                      <p>Position, Company name</p>
+                    </div>
+                    <div
+                      class="mx-5 hidden w-px self-stretch bg-black md:block"
+                    ></div>
+                    <div>
+                      <img
+                        src="https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg"
+                        alt="Webflow logo 3"
+                        class="max-h-12"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-center gap-12">
+            <button
+              class="focus-visible:ring-border-primary items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 size-14 rounded-full left-0 top-1/2 static hidden -translate-y-0 bg-transparent md:flex"
+              disabled=""
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                class="size-6"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"
+                ></path></svg
+              ><span class="sr-only">Previous slide</span>
+            </button>
+            <div class="flex items-center justify-center">
+              <button
+                class="mx-[3px] size-2 rounded-full bg-neutral-darker/40"
+              ></button
+              ><button
+                class="mx-[3px] size-2 rounded-full bg-neutral-darker/40"
+              ></button
+              ><button
+                class="mx-[3px] size-2 rounded-full bg-neutral-darker/40"
+              ></button>
+            </div>
+            <button
+              class="focus-visible:ring-border-primary items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 size-14 rounded-full right-0 top-1/2 static hidden -translate-y-0 bg-transparent md:flex"
+              disabled=""
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                class="size-6"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path></svg
+              ><span class="sr-only">Next slide</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="absolute bottom-0 left-0 right-0 flex h-16 items-center justify-center px-[5%] md:h-18 lg:justify-start"
+    >
+      <p class="text-sm">© 2024 Relume</p>
+    </footer>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

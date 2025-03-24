@@ -1,0 +1,66 @@
+{% extends 'auth-global.html' %}
+
+{% block title %}signup{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+{% include 'components/messages.html' %}
+
+<section  class="relative px-[5%] py-16 md:py-24 lg:py-28">
+    <div class="container relative z-10">
+      <div class="w-full max-w-lg">
+        <p class="mb-3 font-semibold text-white md:mb-4">Welcome</p>
+        <h1
+          class="mb-5 text-6xl font-bold text-white md:mb-6 md:text-9xl lg:text-10xl"
+        >
+          Join or Access
+        </h1>
+        <p class="text-white md:text-md">
+          Easily manage your events by signing up or logging in to your account
+          today.
+        </p>
+        
+        <div class="mt-6 flex flex-wrap gap-4 md:mt-8 ">
+          <form 
+          method="post" action="" name="user"
+          class=" mb-4 column max-w-sm  gap-y-3 sm:grid-cols-[1fr_max-content] sm:gap-4"
+          >
+          {% csrf_token %}
+            <div
+            class="relative flex w-full items-center flex-col gap-3 lg:w-120
+            ">
+              {{ form }}
+            </div>
+            <br>
+            <button
+            class="mt-18 focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-white px-6 py-3"
+            title="login"
+            type="submit"
+          >
+            login
+          </button>
+          </form>
+        </div>
+
+        <p class="text-white md:text-md ">
+            already have an Access?
+            <a 
+            href="/signin"
+            class="mx-2 nth-last-of-type-3:mx-6 nth-last-of-type-[3n+1]:mx-7 ">
+            Login
+            </a>
+          </p>
+      </div>
+    </div>
+    <div class="absolute inset-0 z-0">
+      <img
+      
+        class="size-full object-cover bg-white"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+  </section>
+
+{% endblock%}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         body,html{
+        scroll-behavior: smooth;
+        font-family: "Anton";
+
+
+    }
+        #links{
+
+            font-size: 22px;
+
+{#            backdrop-filter: blur(10px);#}
+            background: linear-gradient(to bottom, #747264 0%,transparent 70%);
+            width: 100%;
+
+
+
+        }
+        .nav-link{
+            color: #747264;
+            tansition:transform 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            transform: scale(1.1);
+            color: #747264;
+        }
+    .active{
+            font-size: 30px;
+        }
+        .card{
+            width: 900px;
+            margin: auto;
+        }
+        p{
+            padding-inline:45% 45%;
+            padding-block:10% 20% ;
+
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand navbar-dark justify-content-center" id="links">
+    <ul class="navbar nav">
+        <li class="nav-item">
+            <a href="/event/adminhm/" class="nav-link ">users</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link " onclick="event()">event teams</a>
+        </li>
+
+    {% if e %}
+        <li class="nav-item">
+            <a href="/event/adminshowbooking/" class="nav-link ">bookings</a>
+        </li>
+        {% else %}
+{% endif %}
+
+        <li class="nav-item">
+            <a  class="nav-link active" href="/event/request/">requests</a>
+        </li>
+
+    {% if c %}
+        <li class="nav-item">
+            <a class="nav-link " href="/event/admincomplaint/" >compaints</a>
+        </li>
+        {% else %}
+{% endif %}
+
+        {% if d %}
+        <li class="nav-item">
+            <a href="/event/adminfeedback/" class="nav-link ">feedbacks</a>
+        </li>
+        {% else %}
+        {% endif %}
+    <li class="nav-item">
+            <a  class="nav-link " href="/event/logout/">logout</a>
+        </li>
+    </ul>
+
+</nav>
+{% if a %}
+<div class="card">
+<form method="post" action="">
+    {% csrf_token %}
+    <table  class="table table-bordered">
+        <tr>
+            <td>
+                title
+            </td><td>
+                email
+            </td><td>
+                verification
+            </td>
+        </tr>
+        {% for i in a %}
+        <tr>
+            <td>
+                {{ i.name }}
+            </td><td>
+                {{ i.email }}
+            </td><td>
+                <a href="{{ i.portfolio }}"  class="btn btn-link btn-sm">portfolio</a>
+                <a href="/event/v_accept/{{ i.id }}"  value="appoved" class="btn btn-success btn-sm">approve</a>
+                <a href="/event/v_reject/{{ i.id }}" value="rejected" class="btn btn-danger btn-sm">decline</a>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+</div>
+{% else %}
+<p>there is no requests.</p>
+{% endif %}
+
+</body>
+</html>
