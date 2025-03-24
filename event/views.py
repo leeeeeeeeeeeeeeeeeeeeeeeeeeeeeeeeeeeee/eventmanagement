@@ -22,9 +22,8 @@ from eventmanagement import settings
 
 
 def strt(request):
-    if request.session['logid']=="":
-        return redirect("/event/clienthome/")
-    elif request.user.is_staff:
+    
+    if request.user.is_staff:
         return render(request,'eventteam/eventhome.html')
     else:
         return redirect("/event/clienthome/")
