@@ -10,7 +10,7 @@ from eventmanagement import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('event/',include('event.urls')),
-    # path('404/', TemplateView.as_view(template_name='404.html')),
+    path('404/', TemplateView.as_view(template_name='404.html')),
     path("register/",views.SignupView.as_view(),name="register"),
     path("signin/",views.SigninView,name="signin"),
     path("signup_manager/",views.signup_manager,name="signup_manager"),
